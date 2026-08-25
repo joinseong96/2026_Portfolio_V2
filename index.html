@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kim Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			/* Skills, Projects랑 같이 묶어서 */
+			.intro_sec,
+			.skills_sec,
+			.projects_sec {
+				position: relative;
+				overflow: hidden;
+			}
+
+			/* 캔버스 공통 - id 대신 class로 통일 */
+			.dust_canvas {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+			}
+
+			/* 텍스트가 캔버스 위로 오도록 */
+			.intro_inner,
+			.skills_inner,
+			.projects_inner {
+				position: relative;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 헤더 -->
+		<header class="header">
+			<div class="header_inner">
+				<a href="#intro" class="header_logo">KIM.DEV</a>
+				<nav class="header_nav">
+					<a href="#intro">소개</a>
+					<a href="#career">경력</a>
+					<a href="#skills">스킬</a>
+					<a href="#projects">프로젝트</a>
+					<a href="#contact">연락처</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- 소개 -->
+		<section id="intro" class="intro_sec">
+			<canvas id="magic_dust_intro" class="dust_canvas"></canvas>
+			<div class="intro_inner">
+				<p class="intro_label">PUBLISHER &rarr; FRONTEND DEVELOPER</p>
+				<h1 class="intro_tit">
+					웹표준과 접근성을 지키며,<br />
+					더 나은 사용자 경험을 만듭니다.
+				</h1>
+				<p class="intro_txt">
+					3년간 웹 퍼블리셔로 다양한 환경(JSP·Spring MVC, PHP·Laravel,
+					Cafe24)에서 마크업과 인터랙션을 설계해왔습니다. 최근에는
+					React·Tailwind 기반 프론트엔드 개발로 영역을 넓히며, 새로운 기술
+					트렌드를 실무에 적용하는 것에 집중하고 있습니다. AI 도구를 적극 활용해
+					개발 속도를 높이되, 결과물을 직접 이해하고 다듬는 과정을 중요하게
+					생각합니다.
+				</p>
+				<a href="#" class="intro_btn">이력서 / 경력기술서 보기</a>
+			</div>
+		</section>
+		<!-- 경력 -->
+		<section id="career" class="career_sec">
+			<div class="career_inner">
+				<p class="sec_label sec_label_dark">CAREER</p>
+				<h2 class="sec_tit sec_tit_dark">경력 사항</h2>
+
+				<ul class="career_list">
+					<li class="career_item">
+						<div class="career_head">
+							<strong class="career_company">OO 에이전시</strong>
+							<span class="career_role">웹 퍼블리셔</span>
+							<span class="career_period">2023.03 ~ 현재</span>
+						</div>
+						<ul class="career_tasks">
+							<li>
+								JSP·Spring MVC 기반 정부기관/스포츠 단체 시스템 마크업 및 UI
+								개발
+							</li>
+							<li>
+								스페셜올림픽코리아 선수등록관리시스템 6단계 회원가입 플로우 설계
+							</li>
+							<li>경기도 포털 사이트 슬라이더 키보드 접근성(ARIA) 구현</li>
+						</ul>
+					</li>
+
+					<li class="career_item">
+						<div class="career_head">
+							<strong class="career_company">OO 스튜디오</strong>
+							<span class="career_role">웹 퍼블리셔</span>
+							<span class="career_period">2022.06 ~ 2023.02</span>
+						</div>
+						<ul class="career_tasks">
+							<li>PHP·Laravel, Cafe24 기반 커머스/기업 사이트 퍼블리싱</li>
+							<li>Lenis 스무스 스크롤 및 인터랙티브 가로 스크롤 갤러리 구현</li>
+							<li>
+								GSAP·ScrollTrigger 기반 인트로 애니메이션 및 스크롤 인터랙션
+								개발
+							</li>
+						</ul>
+					</li>
+
+					<li class="career_item">
+						<div class="career_head">
+							<strong class="career_company">개인/사이드 프로젝트</strong>
+							<span class="career_role">프론트엔드 개발 학습</span>
+							<span class="career_period">2026.03 ~ 현재</span>
+						</div>
+						<ul class="career_tasks">
+							<li>React·Tailwind로 기존 실무 사이트(피죤 브랜드) 리뉴얼</li>
+							<li>GraphQL API 연동 웹 서비스 및 다단계 폼 개발</li>
+							<li>컴포넌트 단위 설계와 재사용 가능한 UI 라이브러리 구축</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- 스킬 -->
+		<section id="skills" class="skills_sec">
+			<canvas id="magic_dust_skills" class="dust_canvas"></canvas>
+			<div class="skills_inner">
+				<p class="sec_label">SKILLS</p>
+				<h2 class="sec_tit">기술 스택</h2>
+
+				<ul class="skills_list">
+					<li class="skills_item">
+						<span class="skills_category">언어</span>
+						<div class="skills_tags">
+							<span>HTML</span><span>CSS</span><span>JavaScript</span>
+						</div>
+					</li>
+					<li class="skills_item">
+						<span class="skills_category">라이브러리 / 프레임워크</span>
+						<div class="skills_tags"><span>React</span><span>jQuery</span></div>
+					</li>
+					<li class="skills_item">
+						<span class="skills_category">빌드 도구</span>
+						<div class="skills_tags">
+							<span>Vite</span>
+						</div>
+					</li>
+					<li class="skills_item">
+						<span class="skills_category">스타일링</span>
+						<div class="skills_tags">
+							<span>Tailwind</span><span>SCSS</span>
+						</div>
+					</li>
+					<li class="skills_item">
+						<span class="skills_category">애니메이션</span>
+						<div class="skills_tags"><span>GSAP</span><span>Lenis</span></div>
+					</li>
+					<li class="skills_item">
+						<span class="skills_category">형상 관리</span>
+						<div class="skills_tags"><span>Git</span><span>GitHub</span></div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- 슬로건 -->
+		<section class="slogan_sec">
+			<p class="slogan_txt">
+				"기본기 위에 새로운 기술을 쌓아가는,<br />
+				성장하는 개발자가 되겠습니다."
+			</p>
+		</section>
+
+		<!-- 프로젝트 -->
+		<section id="projects" class="projects_sec">
+			<canvas id="magic_dust_projects" class="dust_canvas"></canvas>
+			<div class="projects_inner">
+				<p class="sec_label">PROJECTS</p>
+				<h2 class="sec_tit">개인 프로젝트</h2>
+
+				<ul class="projects_list">
+					<li class="projects_item">
+						<strong class="projects_name">Pigeon Renewal</strong>
+						<p class="projects_desc">
+							생활용품 브랜드 피죤 홈페이지를 React + Tailwind로 리뉴얼한 개인
+							작업물입니다. (총 6페이지, 반응형)
+						</p>
+						<div class="projects_stack">
+							<span>Vite</span><span>React</span><span>Tailwind</span>
+						</div>
+						<p class="projects_contrib">기획, 퍼블리싱, 개발 기여도 100%</p>
+						<div class="projects_links">
+							<a href="#">Live</a>
+							<a href="#">GitHub</a>
+						</div>
+					</li>
+
+					<li class="projects_item">
+						<strong class="projects_name">aniworld</strong>
+						<p class="projects_desc">
+							AniList GraphQL API로 만든 애니메이션 탐색 서비스입니다. 검색,
+							상세페이지, 무한스크롤을 구현했습니다.
+						</p>
+						<div class="projects_stack">
+							<span>Vite</span><span>React</span><span>Tailwind</span
+							><span>GraphQL</span>
+						</div>
+						<p class="projects_contrib">기획, 개발 기여도 100%</p>
+						<div class="projects_links">
+							<a href="#">Live</a>
+							<a href="#">GitHub</a>
+						</div>
+					</li>
+
+					<li class="projects_item">
+						<strong class="projects_name">climbing-signup</strong>
+						<p class="projects_desc">
+							다단계 회원가입 폼 UI/로직을 구현한 개인 작업물입니다. 단계별
+							유효성 검사와 상태 관리를 다뤘습니다.
+						</p>
+						<div class="projects_stack">
+							<span>Vite</span><span>React</span><span>Tailwind</span>
+						</div>
+						<p class="projects_contrib">기획, 개발 기여도 100%</p>
+						<div class="projects_links">
+							<a href="#">Live</a>
+							<a href="#">GitHub</a>
+						</div>
+					</li>
+
+					<li class="projects_item">
+						<strong class="projects_name">Component Library</strong>
+						<p class="projects_desc">
+							다크모드를 지원하는 8개 컴포넌트로 구성된 재사용 가능한 UI
+							라이브러리입니다.
+						</p>
+						<div class="projects_stack">
+							<span>Vite</span><span>React</span><span>Tailwind</span>
+						</div>
+						<p class="projects_contrib">기획, 개발 기여도 100%</p>
+						<div class="projects_links">
+							<a href="#">Live</a>
+							<a href="#">GitHub</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- 연락처 -->
+		<section id="contact" class="contact_sec">
+			<h2 class="sec_tit sec_tit_dark">함께 일하고 싶은 팀을 찾습니다</h2>
+			<p class="contact_txt">연락 주시면 빠르게 답변드리겠습니다.</p>
+			<div class="contact_links">
+				<a href="#">Email</a>
+				<a href="#">GitHub</a>
+			</div>
+		</section>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/Physics2DPlugin.min.js"></script>
+		<script src="script.js"></script>
+		<script>
+			// ===== 공통 텍스처 (전체 섹션이 공유해서 씀 - 중복 생성 안 함) =====
+			const resolution = window.devicePixelRatio || 1;
+
+			function createGlowShape(size, colorRGB) {
+				const oversample = 2;
+				const padding = 30;
+				const canvasSize = size + padding * 2;
+				const renderSize = canvasSize * oversample;
+
+				const c = document.createElement("canvas");
+				const cctx = c.getContext("2d");
+				c.width = renderSize * resolution;
+				c.height = renderSize * resolution;
+				cctx.scale(resolution, resolution);
+
+				const center = renderSize / 2;
+				const radius = (size * oversample) / 2;
+
+				const gradient = cctx.createRadialGradient(
+					center,
+					center,
+					0,
+					center,
+					center,
+					radius,
+				);
+				gradient.addColorStop(0, `rgba(${colorRGB},0.9)`);
+				gradient.addColorStop(0.3, `rgba(${colorRGB},0.5)`);
+				gradient.addColorStop(0.7, `rgba(${colorRGB},0.15)`);
+				gradient.addColorStop(1, `rgba(${colorRGB},0)`);
+
+				cctx.shadowColor = `rgba(${colorRGB},0.6)`;
+				cctx.shadowBlur = 15 * oversample;
+				cctx.fillStyle = gradient;
+				cctx.beginPath();
+				cctx.arc(center, center, radius, 0, Math.PI * 2);
+				cctx.fill();
+
+				return { canvas: c, size: canvasSize };
+			}
+
+			const particleTypes = [
+				{ rgb: "125,211,176", weight: 5 },
+				{ rgb: "232,230,223", weight: 3 },
+				{ rgb: "202,76,255", weight: 1 },
+			];
+			const weightedTypes = particleTypes.flatMap((t) =>
+				Array(t.weight).fill(t),
+			);
+			const sharedTextures = weightedTypes.map((t) =>
+				createGlowShape(24, t.rgb),
+			);
+
+			function randomNr(min, max) {
+				if (max === undefined) {
+					max = min;
+					min = 0;
+				}
+				return min + (max - min) * Math.random();
+			}
+
+			// ===== 섹션 하나에 dust 캔버스를 붙이는 함수 =====
+			// canvasId: <canvas>의 id, sectionId: 그 캔버스를 담은 섹션의 id
+			function initDustCanvas(canvasId, sectionId, particleCount = 90) {
+				const panel = document.getElementById(sectionId);
+				const cv = document.getElementById(canvasId);
+				if (!panel || !cv) return; // 해당 섹션이 없으면 조용히 건너뜀
+
+				const ctx = cv.getContext("2d");
+				let cvWidth, cvHeight;
+
+				function resizeCv() {
+					cvWidth = panel.offsetWidth;
+					cvHeight = panel.offsetHeight;
+					cv.width = cvWidth * resolution;
+					cv.height = cvHeight * resolution;
+					cv.style.width = cvWidth + "px";
+					cv.style.height = cvHeight + "px";
+					ctx.scale(resolution, resolution);
+				}
+				resizeCv();
+				window.addEventListener("resize", resizeCv);
+
+				const sprites = [];
+				const timelines = []; // 여기 있는 타임라인들을 한꺼번에 재생/정지시킴
+
+				function createSprite() {
+					const baked =
+						sharedTextures[Math.floor(Math.random() * sharedTextures.length)];
+					const duration = randomNr(6, 14);
+
+					const tl = gsap.timeline({
+						delay: randomNr(3),
+						repeat: -1,
+						repeatDelay: randomNr(1),
+					});
+
+					const sprite = {
+						baked,
+						alpha: 0,
+						scale:
+							Math.random() < 0.85 ? randomNr(0.2, 0.6) : randomNr(0.8, 1.2),
+						x: randomNr(0, cvWidth),
+						y: randomNr(0, cvHeight),
+					};
+
+					tl.to(sprite, { duration: 1.5, alpha: 1 })
+						.to(
+							sprite,
+							{
+								duration,
+								physics2D: {
+									velocity: randomNr(15, 35),
+									angle: randomNr(0, 360),
+									gravity: 0,
+								},
+								ease: "sine.inOut",
+							},
+							"<",
+						)
+						.to(sprite, { duration: 1.5, alpha: 0 }, duration - 1.5);
+
+					timelines.push(tl);
+					return sprite;
+				}
+
+				for (let i = 0; i < particleCount; i++) {
+					sprites.push(createSprite());
+				}
+
+				function render() {
+					ctx.clearRect(0, 0, cvWidth, cvHeight);
+					ctx.globalCompositeOperation = "lighter";
+					sprites.forEach((s) => {
+						if (!s.alpha) return;
+						ctx.save();
+						ctx.globalAlpha = s.alpha;
+						ctx.translate(s.x, s.y);
+						ctx.scale(s.scale, s.scale);
+						ctx.drawImage(
+							s.baked.canvas,
+							-s.baked.size / 2,
+							-s.baked.size / 2,
+							s.baked.size,
+							s.baked.size,
+						);
+						ctx.restore();
+					});
+					ctx.globalCompositeOperation = "source-over";
+				}
+
+				// 화면에 보일 때만 재생 - 안 보이면 타임라인도 멈추고, 렌더 함수도 ticker에서 뺌
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								timelines.forEach((tl) => tl.play());
+								gsap.ticker.add(render);
+							} else {
+								timelines.forEach((tl) => tl.pause());
+								gsap.ticker.remove(render);
+							}
+						});
+					},
+					{ threshold: 0.01 }, // 1%라도 보이면 켬
+				);
+				observer.observe(panel);
+			}
+
+			// GSAP 플러그인은 한 번만 등록
+			gsap.registerPlugin(Physics2DPlugin);
+
+			// ===== 각 섹션에 적용 =====
+			initDustCanvas("magic_dust_intro", "intro", 50);
+			initDustCanvas("magic_dust_skills", "skills", 40);
+			initDustCanvas("magic_dust_projects", "projects", 40);
+		</script>
+	</body>
+</html>
