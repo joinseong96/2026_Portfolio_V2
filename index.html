@@ -4,34 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Kim Portfolio</title>
-		<link rel="stylesheet" href="style.css" />
-		<style>
-			/* Skills, Projects랑 같이 묶어서 */
-			.intro_sec,
-			.skills_sec,
-			.projects_sec {
-				position: relative;
-				overflow: hidden;
-			}
-
-			/* 캔버스 공통 - id 대신 class로 통일 */
-			.dust_canvas {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				z-index: 0;
-			}
-
-			/* 텍스트가 캔버스 위로 오도록 */
-			.intro_inner,
-			.skills_inner,
-			.projects_inner {
-				position: relative;
-				z-index: 1;
-			}
-		</style>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 	<body>
 		<!-- 헤더 -->
@@ -58,7 +33,7 @@
 					더 나은 사용자 경험을 만듭니다.
 				</h1>
 				<p class="intro_txt">
-					3년간 웹 퍼블리셔로 다양한 환경(JSP·Spring MVC, PHP·Laravel,
+					4년간 웹 퍼블리셔로 다양한 환경(JSP·Spring MVC, PHP·Laravel,
 					Cafe24)에서 마크업과 인터랙션을 설계해왔습니다. 최근에는
 					React·Tailwind 기반 프론트엔드 개발로 영역을 넓히며, 새로운 기술
 					트렌드를 실무에 적용하는 것에 집중하고 있습니다. AI 도구를 적극 활용해
@@ -75,11 +50,16 @@
 				<h2 class="sec_tit sec_tit_dark">경력 사항</h2>
 
 				<ul class="career_list">
-					<li class="career_item">
+					<li
+						class="career_item"
+						data-aos="fade-up"
+						data-aos-anchor-placement="center-bottom"
+						data-aos-duration="600"
+					>
 						<div class="career_head">
-							<strong class="career_company">OO 에이전시</strong>
-							<span class="career_role">웹 퍼블리셔</span>
-							<span class="career_period">2023.03 ~ 현재</span>
+							<strong class="career_company">십이지</strong>
+							<span class="career_role">웹팀 주임</span>
+							<span class="career_period">2023.11 ~ 현재</span>
 						</div>
 						<ul class="career_tasks">
 							<li>
@@ -90,14 +70,28 @@
 								스페셜올림픽코리아 선수등록관리시스템 6단계 회원가입 플로우 설계
 							</li>
 							<li>경기도 포털 사이트 슬라이더 키보드 접근성(ARIA) 구현</li>
+							<li>
+								도메인 만료로 인한 서버(Apache) 재연결 및 카페24·사방넷 API
+								재연동 등 운영 중 인프라 이슈 대응
+							</li>
+							<li>
+								MySQL 쿼리 작성·수정으로 백엔드 개발자와 협업, Apache·MySQL 서버
+								간 데이터 이전 작업 수행
+							</li>
+							<li>카페24 자사몰 사이트 커스텀 개발 및 유지보수</li>
 						</ul>
 					</li>
 
-					<li class="career_item">
+					<li
+						class="career_item"
+						data-aos="fade-up"
+						data-aos-anchor-placement="center-bottom"
+						data-aos-duration="600"
+					>
 						<div class="career_head">
-							<strong class="career_company">OO 스튜디오</strong>
-							<span class="career_role">웹 퍼블리셔</span>
-							<span class="career_period">2022.06 ~ 2023.02</span>
+							<strong class="career_company">라이피스</strong>
+							<span class="career_role">웹팀 팀원</span>
+							<span class="career_period">2022.08 ~ 2023.07</span>
 						</div>
 						<ul class="career_tasks">
 							<li>PHP·Laravel, Cafe24 기반 커머스/기업 사이트 퍼블리싱</li>
@@ -109,16 +103,19 @@
 						</ul>
 					</li>
 
-					<li class="career_item">
+					<li
+						class="career_item"
+						data-aos="fade-up"
+						data-aos-anchor-placement="center-bottom"
+						data-aos-duration="600"
+					>
 						<div class="career_head">
-							<strong class="career_company">개인/사이드 프로젝트</strong>
-							<span class="career_role">프론트엔드 개발 학습</span>
-							<span class="career_period">2026.03 ~ 현재</span>
+							<strong class="career_company">컬러스</strong>
+							<span class="career_role">웹팀 팀원</span>
+							<span class="career_period">2022.06 ~ 2022.08</span>
 						</div>
 						<ul class="career_tasks">
-							<li>React·Tailwind로 기존 실무 사이트(피죤 브랜드) 리뉴얼</li>
-							<li>GraphQL API 연동 웹 서비스 및 다단계 폼 개발</li>
-							<li>컴포넌트 단위 설계와 재사용 가능한 UI 라이브러리 구축</li>
+							<li>PHP·Laravel 기반 프로젝트 유지보수, 개발자들과 협업</li>
 						</ul>
 					</li>
 				</ul>
@@ -162,6 +159,10 @@
 					<li class="skills_item">
 						<span class="skills_category">형상 관리</span>
 						<div class="skills_tags"><span>Git</span><span>GitHub</span></div>
+					</li>
+					<li class="skills_item">
+						<span class="skills_category">협업 도구</span>
+						<div class="skills_tags"><span>Notion</span></div>
 					</li>
 				</ul>
 			</div>
@@ -263,184 +264,11 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/Physics2DPlugin.min.js"></script>
-		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="/js/canvas.js"></script>
+		<script src="/js/script.js"></script>
 		<script>
-			// ===== 공통 텍스처 (전체 섹션이 공유해서 씀 - 중복 생성 안 함) =====
-			const resolution = window.devicePixelRatio || 1;
-
-			function createGlowShape(size, colorRGB) {
-				const oversample = 2;
-				const padding = 30;
-				const canvasSize = size + padding * 2;
-				const renderSize = canvasSize * oversample;
-
-				const c = document.createElement("canvas");
-				const cctx = c.getContext("2d");
-				c.width = renderSize * resolution;
-				c.height = renderSize * resolution;
-				cctx.scale(resolution, resolution);
-
-				const center = renderSize / 2;
-				const radius = (size * oversample) / 2;
-
-				const gradient = cctx.createRadialGradient(
-					center,
-					center,
-					0,
-					center,
-					center,
-					radius,
-				);
-				gradient.addColorStop(0, `rgba(${colorRGB},0.9)`);
-				gradient.addColorStop(0.3, `rgba(${colorRGB},0.5)`);
-				gradient.addColorStop(0.7, `rgba(${colorRGB},0.15)`);
-				gradient.addColorStop(1, `rgba(${colorRGB},0)`);
-
-				cctx.shadowColor = `rgba(${colorRGB},0.6)`;
-				cctx.shadowBlur = 15 * oversample;
-				cctx.fillStyle = gradient;
-				cctx.beginPath();
-				cctx.arc(center, center, radius, 0, Math.PI * 2);
-				cctx.fill();
-
-				return { canvas: c, size: canvasSize };
-			}
-
-			const particleTypes = [
-				{ rgb: "125,211,176", weight: 5 },
-				{ rgb: "232,230,223", weight: 3 },
-				{ rgb: "202,76,255", weight: 1 },
-			];
-			const weightedTypes = particleTypes.flatMap((t) =>
-				Array(t.weight).fill(t),
-			);
-			const sharedTextures = weightedTypes.map((t) =>
-				createGlowShape(24, t.rgb),
-			);
-
-			function randomNr(min, max) {
-				if (max === undefined) {
-					max = min;
-					min = 0;
-				}
-				return min + (max - min) * Math.random();
-			}
-
-			// ===== 섹션 하나에 dust 캔버스를 붙이는 함수 =====
-			// canvasId: <canvas>의 id, sectionId: 그 캔버스를 담은 섹션의 id
-			function initDustCanvas(canvasId, sectionId, particleCount = 90) {
-				const panel = document.getElementById(sectionId);
-				const cv = document.getElementById(canvasId);
-				if (!panel || !cv) return; // 해당 섹션이 없으면 조용히 건너뜀
-
-				const ctx = cv.getContext("2d");
-				let cvWidth, cvHeight;
-
-				function resizeCv() {
-					cvWidth = panel.offsetWidth;
-					cvHeight = panel.offsetHeight;
-					cv.width = cvWidth * resolution;
-					cv.height = cvHeight * resolution;
-					cv.style.width = cvWidth + "px";
-					cv.style.height = cvHeight + "px";
-					ctx.scale(resolution, resolution);
-				}
-				resizeCv();
-				window.addEventListener("resize", resizeCv);
-
-				const sprites = [];
-				const timelines = []; // 여기 있는 타임라인들을 한꺼번에 재생/정지시킴
-
-				function createSprite() {
-					const baked =
-						sharedTextures[Math.floor(Math.random() * sharedTextures.length)];
-					const duration = randomNr(6, 14);
-
-					const tl = gsap.timeline({
-						delay: randomNr(3),
-						repeat: -1,
-						repeatDelay: randomNr(1),
-					});
-
-					const sprite = {
-						baked,
-						alpha: 0,
-						scale:
-							Math.random() < 0.85 ? randomNr(0.2, 0.6) : randomNr(0.8, 1.2),
-						x: randomNr(0, cvWidth),
-						y: randomNr(0, cvHeight),
-					};
-
-					tl.to(sprite, { duration: 1.5, alpha: 1 })
-						.to(
-							sprite,
-							{
-								duration,
-								physics2D: {
-									velocity: randomNr(15, 35),
-									angle: randomNr(0, 360),
-									gravity: 0,
-								},
-								ease: "sine.inOut",
-							},
-							"<",
-						)
-						.to(sprite, { duration: 1.5, alpha: 0 }, duration - 1.5);
-
-					timelines.push(tl);
-					return sprite;
-				}
-
-				for (let i = 0; i < particleCount; i++) {
-					sprites.push(createSprite());
-				}
-
-				function render() {
-					ctx.clearRect(0, 0, cvWidth, cvHeight);
-					ctx.globalCompositeOperation = "lighter";
-					sprites.forEach((s) => {
-						if (!s.alpha) return;
-						ctx.save();
-						ctx.globalAlpha = s.alpha;
-						ctx.translate(s.x, s.y);
-						ctx.scale(s.scale, s.scale);
-						ctx.drawImage(
-							s.baked.canvas,
-							-s.baked.size / 2,
-							-s.baked.size / 2,
-							s.baked.size,
-							s.baked.size,
-						);
-						ctx.restore();
-					});
-					ctx.globalCompositeOperation = "source-over";
-				}
-
-				// 화면에 보일 때만 재생 - 안 보이면 타임라인도 멈추고, 렌더 함수도 ticker에서 뺌
-				const observer = new IntersectionObserver(
-					(entries) => {
-						entries.forEach((entry) => {
-							if (entry.isIntersecting) {
-								timelines.forEach((tl) => tl.play());
-								gsap.ticker.add(render);
-							} else {
-								timelines.forEach((tl) => tl.pause());
-								gsap.ticker.remove(render);
-							}
-						});
-					},
-					{ threshold: 0.01 }, // 1%라도 보이면 켬
-				);
-				observer.observe(panel);
-			}
-
-			// GSAP 플러그인은 한 번만 등록
-			gsap.registerPlugin(Physics2DPlugin);
-
-			// ===== 각 섹션에 적용 =====
-			initDustCanvas("magic_dust_intro", "intro", 50);
-			initDustCanvas("magic_dust_skills", "skills", 40);
-			initDustCanvas("magic_dust_projects", "projects", 40);
+			AOS.init();
 		</script>
 	</body>
 </html>

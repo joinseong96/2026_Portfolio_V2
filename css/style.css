@@ -1,9 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 body {
 	font-family:
 		"Pretendard",
@@ -15,62 +9,31 @@ body {
 	scroll-behavior: smooth;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-ul {
-	list-style: none;
-}
-
-@keyframes fadeUp {
-	to {
-		opacity: 1;
-		transform: translateY(0);
+@media (hover: hover) {
+	.header_nav a:hover::after {
+		width: 100%;
+	}
+	.header_nav a:hover {
+		color: #7dd3b0;
+	}
+	.intro_btn:hover {
+		background: #6bc29d;
+		transform: scale(1.05);
+	}
+	.career_item:hover {
+		border-left-color: #7dd3b0;
+	}
+	.skills_tags span:hover {
+		transform: translateY(-3px) scale(1.05);
+		border-color: #7dd3b0;
+		color: #7dd3b0;
+	}
+	.projects_item:hover {
+		border-color: #7dd3b0;
+		transform: translateY(-6px);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 	}
 }
-.reveal {
-	opacity: 0;
-	transform: translateY(24px);
-	transition:
-		opacity 0.6s ease,
-		transform 0.6s ease;
-}
-.reveal.is_visible {
-	opacity: 1;
-	transform: translateY(0);
-}
-.reveal_stagger > * {
-	opacity: 0;
-	transform: translateY(20px);
-	transition:
-		opacity 0.5s ease,
-		transform 0.5s ease;
-}
-.reveal_stagger.is_visible > * {
-	opacity: 1;
-	transform: translateY(0);
-}
-.reveal_stagger.is_visible > *:nth-child(1) {
-	transition-delay: 0s;
-}
-.reveal_stagger.is_visible > *:nth-child(2) {
-	transition-delay: 0.1s;
-}
-.reveal_stagger.is_visible > *:nth-child(3) {
-	transition-delay: 0.2s;
-}
-.reveal_stagger.is_visible > *:nth-child(4) {
-	transition-delay: 0.3s;
-}
-.reveal_stagger.is_visible > *:nth-child(5) {
-	transition-delay: 0.4s;
-}
-.reveal_stagger.is_visible > *:nth-child(6) {
-	transition-delay: 0.5s;
-}
-
 /* ===== 공통 섹션 라벨/타이틀 ===== */
 .sec_label {
 	font-family: monospace;
@@ -83,9 +46,9 @@ ul {
 	color: #5b7a6a;
 }
 .sec_tit {
-	font-size: 30px;
+	font-size: 32px;
 	font-weight: 700;
-	margin-bottom: 48px;
+	margin-bottom: 30px;
 	color: #e8e6df;
 }
 .sec_tit_dark {
@@ -138,12 +101,8 @@ ul {
 	background: #7dd3b0;
 	transition: width 0.25s ease;
 }
-.header_nav a:hover::after,
 .header_nav a.is_active::after {
 	width: 100%;
-}
-.header_nav a:hover {
-	color: #7dd3b0;
 }
 .header_nav a.is_active {
 	color: #7dd3b0;
@@ -152,7 +111,7 @@ ul {
 
 /* ===== 인트로 ===== */
 .intro_sec {
-	min-height: 70vh;
+	min-height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -178,7 +137,7 @@ ul {
 	margin-bottom: 24px;
 }
 .intro_txt {
-	color: #9a9788;
+	color: #b3b2ad;
 	max-width: 560px;
 	margin-bottom: 32px;
 }
@@ -193,10 +152,6 @@ ul {
 	transition:
 		background 0.2s,
 		transform 0.2s;
-}
-.intro_btn:hover {
-	background: #6bc29d;
-	transform: scale(1.05);
 }
 
 /* ===== 경력 ===== */
@@ -218,9 +173,7 @@ ul {
 	border-left: 2px solid #d8d4c8;
 	transition: border-color 0.25s ease;
 }
-.career_item:hover {
-	border-left-color: #7dd3b0;
-}
+
 .career_head {
 	display: flex;
 	flex-wrap: wrap;
@@ -297,21 +250,17 @@ ul {
 		transform 0.15s ease,
 		border-color 0.15s ease,
 		color 0.15s ease;
-}
-.skills_tags span:hover {
-	transform: translateY(-3px) scale(1.05);
-	border-color: #7dd3b0;
-	color: #7dd3b0;
+	cursor: default;
 }
 
 /* ===== 슬로건 ===== */
 .slogan_sec {
-	padding: 80px 32px;
+	padding: 120px 0;
 	background: #f4f2ec;
 	text-align: center;
 }
 .slogan_txt {
-	font-size: 24px;
+	font-size: 32px;
 	font-weight: 600;
 	color: #1a1d24;
 	max-width: 520px;
@@ -347,11 +296,7 @@ ul {
 		transform 0.25s ease,
 		box-shadow 0.25s ease;
 }
-.projects_item:hover {
-	border-color: #7dd3b0;
-	transform: translateY(-6px);
-	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
+
 .projects_name {
 	display: block;
 	font-size: 18px;
@@ -400,6 +345,7 @@ ul {
 	text-align: center;
 }
 .contact_txt {
+	font-size: 18px;
 	color: #6b6858;
 	margin-bottom: 32px;
 }
@@ -413,4 +359,30 @@ ul {
 .contact_links a {
 	color: #5b7a6a;
 	text-decoration: underline;
+}
+
+/* canvas style */
+.intro_sec,
+.skills_sec,
+.projects_sec {
+	position: relative;
+	overflow: hidden;
+}
+
+/* 캔버스 공통 - id 대신 class로 통일 */
+.dust_canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+/* 텍스트가 캔버스 위로 오도록 */
+.intro_inner,
+.skills_inner,
+.projects_inner {
+	position: relative;
+	z-index: 1;
 }
