@@ -36,11 +36,9 @@ body {
 }
 /* ===== 공통 섹션 라벨/타이틀 ===== */
 .sec_label {
-	font-family: monospace;
-	font-size: 13px;
+	font-size: 14px;
 	letter-spacing: 2px;
 	color: #7dd3b0;
-	margin-bottom: 8px;
 }
 .sec_label_dark {
 	color: #5b7a6a;
@@ -76,8 +74,7 @@ body {
 	justify-content: space-between;
 }
 .header_logo {
-	font-family: monospace;
-	font-size: 14px;
+	font-size: 20px;
 	color: #7dd3b0;
 }
 .header_nav {
@@ -86,7 +83,7 @@ body {
 }
 .header_nav a {
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
 	color: #e8e6df;
 	transition: color 0.2s;
 	padding-bottom: 4px;
@@ -124,8 +121,7 @@ body {
 	width: 100%;
 }
 .intro_label {
-	font-family: monospace;
-	font-size: 13px;
+	font-size: 14px;
 	letter-spacing: 2px;
 	color: #7dd3b0;
 	margin-bottom: 16px;
@@ -140,6 +136,7 @@ body {
 	color: #b3b2ad;
 	max-width: 560px;
 	margin-bottom: 32px;
+	font-size: 16px;
 }
 .intro_btn {
 	display: inline-block;
@@ -182,7 +179,7 @@ body {
 	margin-bottom: 12px;
 }
 .career_company {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 700;
 	color: #1a1d24;
 }
@@ -192,15 +189,17 @@ body {
 }
 .career_period {
 	font-family: monospace;
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 500;
 	color: #9a9788;
 }
 .career_tasks li {
-	font-size: 14px;
+	font-size: 16px;
 	color: #444;
 	padding-left: 14px;
 	position: relative;
 	margin-bottom: 8px;
+	cursor: default;
 }
 .career_tasks li::before {
 	content: "·";
@@ -263,7 +262,7 @@ body {
 	font-size: 32px;
 	font-weight: 600;
 	color: #1a1d24;
-	max-width: 520px;
+	max-width: 720px;
 	margin: 0 auto;
 	line-height: 1.6;
 }
@@ -345,7 +344,7 @@ body {
 	text-align: center;
 }
 .contact_txt {
-	font-size: 18px;
+	font-size: 22px;
 	color: #6b6858;
 	margin-bottom: 32px;
 }
@@ -353,8 +352,8 @@ body {
 	display: flex;
 	justify-content: center;
 	gap: 24px;
-	font-family: monospace;
-	font-size: 14px;
+	font-size: 18px;
+	font-weight: 600;
 }
 .contact_links a {
 	color: #5b7a6a;

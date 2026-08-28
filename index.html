@@ -5,8 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Kim Portfolio</title>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="/css/reset.css" />
-		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/reponse.css" />
 	</head>
 	<body>
 		<!-- 헤더 -->
@@ -27,7 +28,7 @@
 		<section id="intro" class="intro_sec">
 			<canvas id="magic_dust_intro" class="dust_canvas"></canvas>
 			<div class="intro_inner">
-				<p class="intro_label">PUBLISHER &rarr; FRONTEND DEVELOPER</p>
+				<p class="intro_label">PUBLISHER · INTERACTIVE PUBLISHING</p>
 				<h1 class="intro_tit">
 					웹표준과 접근성을 지키며,<br />
 					더 나은 사용자 경험을 만듭니다.
@@ -40,7 +41,9 @@
 					개발 속도를 높이되, 결과물을 직접 이해하고 다듬는 과정을 중요하게
 					생각합니다.
 				</p>
-				<a href="#" class="intro_btn">이력서 / 경력기술서 보기</a>
+				<a href="docs/이력서_경력기술서.pdf" target="_blank" class="intro_btn"
+					>이력서 / 경력기술서 보기</a
+				>
 			</div>
 		</section>
 		<!-- 경력 -->
@@ -62,6 +65,10 @@
 							<span class="career_period">2023.11 ~ 현재</span>
 						</div>
 						<ul class="career_tasks">
+							<li>
+								십이지 자사 소개 홈페이지(sibizi.com) 퍼블리싱 단독 전담,
+								GSAP·ScrollTrigger 기반 스크롤 연동 애니메이션 구현
+							</li>
 							<li>
 								JSP·Spring MVC 기반 정부기관/스포츠 단체 시스템 마크업 및 UI
 								개발
@@ -171,8 +178,8 @@
 		<!-- 슬로건 -->
 		<section class="slogan_sec">
 			<p class="slogan_txt">
-				"기본기 위에 새로운 기술을 쌓아가는,<br />
-				성장하는 개발자가 되겠습니다."
+				"웹표준과 접근성 위에 인터랙션을 더해,<br />
+				즐거운 상상력을 실현하는 퍼블리셔가 되겠습니다."
 			</p>
 		</section>
 
@@ -184,6 +191,21 @@
 				<h2 class="sec_tit">개인 프로젝트</h2>
 
 				<ul class="projects_list">
+					<li class="projects_item">
+						<strong class="projects_name">십이지 자사 소개 홈페이지</strong>
+						<p class="projects_desc">
+							재직 중인 십이지의 자사 소개 홈페이지 퍼블리싱을 전담했습니다.
+							GSAP·ScrollTrigger 기반 스크롤 연동 애니메이션과 인트로 모션을
+							구현했습니다.
+						</p>
+						<div class="projects_stack">
+							<span>GSAP</span><span>ScrollTrigger</span><span>JavaScript</span>
+						</div>
+						<p class="projects_contrib">퍼블리싱 기여도 100%</p>
+						<div class="projects_links">
+							<a href="https://sibizi.com/" target="_blank">Live</a>
+						</div>
+					</li>
 					<li class="projects_item">
 						<strong class="projects_name">Pigeon Renewal</strong>
 						<p class="projects_desc">
@@ -283,16 +305,16 @@
 			<h2 class="sec_tit sec_tit_dark">함께 일하고 싶은 팀을 찾습니다</h2>
 			<p class="contact_txt">연락 주시면 빠르게 답변드리겠습니다.</p>
 			<div class="contact_links">
-				<a href="#">Email</a>
-				<a href="#">GitHub</a>
+				<a href="mailto:issseong9460163@gmail.com">Email</a>
+				<a href="https://github.com/joinseong96" target="_blank">GitHub</a>
 			</div>
 		</section>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/Physics2DPlugin.min.js"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="/js/canvas.js"></script>
-		<script src="/js/script.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/script.js"></script>
 		<script>
 			AOS.init();
 		</script>
